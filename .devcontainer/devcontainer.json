@@ -1,0 +1,17 @@
+{
+  "name": "nla2",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "ms-vscode.cpptools-extension-pack"
+      ]
+    }
+  }
+}
