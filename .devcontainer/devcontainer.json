@@ -7,11 +7,15 @@
   "features": {},
   "customizations": {
     "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3"
+      },
       "extensions": [
         "ms-toolsai.jupyter",
         "ms-python.python",
         "ms-vscode.cpptools-extension-pack"
       ]
     }
-  }
+  },
+  "postCreateCommand": "mkdir -p ~/.vscode && ln -sf $PWD/.devcontainer/c_cpp_properties.json ~/.vscode/c_cpp_properties.json"
 }
