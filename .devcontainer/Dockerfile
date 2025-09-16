@@ -13,6 +13,7 @@ RUN pip install -U --break-system-packages ipykernel numpy scipy sympy matplotli
 # Install PETSc
 ENV PETSC_DIR=/opt/petsc
 ENV PETSC_ARCH=arch-dbg
+ENV SLEPC_DIR=$PETSC_DIR/$PETSC_ARCH/externalpackages/git.slepc
 WORKDIR /opt
 RUN git clone -b release https://gitlab.com/petsc/petsc.git && cd petsc && \
     ./configure \
@@ -26,11 +27,11 @@ RUN git clone -b release https://gitlab.com/petsc/petsc.git && cd petsc && \
       --download-slepc \
       --download-hypre \
       --with-fortran-bindings=0 && \
-    make all
+    make all && chown -R vscode:vscode /opt/petsc
 
 # Build and install petsc4py
 WORKDIR /opt/petsc
-RUN python3 -m pip install --break-system-packages src/binding/petsc4py
+RUN python3 -m pip install --break-system-packages petsc4py slepc4py
 
 # Environment variables
 ENV PATH=$PETSC_DIR/$PETSC_ARCH/bin:$PATH
