@@ -1,0 +1,11 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.useLibraryCodeForTypes": true,
+    "python.analysis.languageServerMode": "full",
+    "python.analysis.extraPaths": [".vscode/typings"],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportGeneralTypeIssues": "none",
+        "variable-not-allowed-in-type-expression": "none"
+    }
+}

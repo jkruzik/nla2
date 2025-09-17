@@ -1,0 +1,73 @@
+from .PETSc import DM, InsertMode, KSP, Mat, NormType, NullSpace, Object, SNES, ScatterMode, TAO, TAOLineSearch, TS, Vec
+from _typeshed import Incomplete
+from numpy.typing import NDArray
+from typing import Callable, Sequence
+
+__all__ = ['Scalar', 'ArrayBool', 'ArrayInt', 'ArrayReal', 'ArrayComplex', 'ArrayScalar', 'DimsSpec', 'AccessModeSpec', 'InsertModeSpec', 'ScatterModeSpec', 'LayoutSizeSpec', 'NormTypeSpec', 'PetscOptionsHandlerFunction', 'MatAssemblySpec', 'MatSizeSpec', 'MatBlockSizeSpec', 'CSRIndicesSpec', 'CSRSpec', 'NNZSpec', 'MatNullFunction', 'DMCoarsenHookFunction', 'DMRestrictHookFunction', 'KSPRHSFunction', 'KSPOperatorsFunction', 'KSPConvergenceTestFunction', 'KSPMonitorFunction', 'KSPPreSolveFunction', 'KSPPostSolveFunction', 'TSRHSFunction', 'TSRHSJacobian', 'TSRHSJacobianP', 'TSIFunction', 'TSIJacobian', 'TSIJacobianP', 'TSI2Function', 'TSI2Jacobian', 'TSI2JacobianP', 'TSMonitorFunction', 'TSPreStepFunction', 'TSPostStepFunction', 'TSIndicatorFunction', 'TSPostEventFunction', 'TSPreStepFunction', 'TSPostStepFunction', 'TAOObjectiveFunction', 'TAOGradientFunction', 'TAOObjectiveGradientFunction', 'TAOHessianFunction', 'TAOUpdateFunction', 'TAOMonitorFunction', 'TAOConvergedFunction', 'TAOJacobianFunction', 'TAOResidualFunction', 'TAOJacobianResidualFunction', 'TAOVariableBoundsFunction', 'TAOConstraintsFunction', 'TAOConstraintsJacobianFunction', 'TAOLSObjectiveFunction', 'TAOLSGradientFunction', 'TAOLSObjectiveGradientFunction']
+
+Scalar = float | complex
+ArrayBool = NDArray[bool]
+ArrayInt = NDArray[int]
+ArrayReal = NDArray[float]
+ArrayComplex = NDArray[complex]
+ArrayScalar = NDArray[Scalar]
+DimsSpec = tuple[int, ...]
+AccessModeSpec: Incomplete
+InsertModeSpec = InsertMode | bool | None
+ScatterModeSpec = ScatterMode | bool | str | None
+LayoutSizeSpec = int | tuple[int, int]
+NormTypeSpec = NormType | None
+PetscOptionsHandlerFunction = Callable[[Object], None]
+MatAssemblySpec: Incomplete
+MatSizeSpec = int | tuple[int, int] | tuple[tuple[int, int], tuple[int, int]]
+MatBlockSizeSpec = int | tuple[int, int]
+CSRIndicesSpec = tuple[Sequence[int], Sequence[int]]
+CSRSpec = tuple[Sequence[int], Sequence[int], Sequence[Scalar]]
+NNZSpec = int | Sequence[int] | tuple[Sequence[int], Sequence[int]]
+MatNullFunction = Callable[[NullSpace, Vec], None]
+DMCoarsenHookFunction = Callable[[DM, DM], None]
+DMRestrictHookFunction = Callable[[DM, Mat, Vec, Mat, DM], None]
+KSPRHSFunction = Callable[[KSP, Vec], None]
+KSPOperatorsFunction = Callable[[KSP, Mat, Mat], None]
+KSPConvergenceTestFunction: Incomplete
+KSPMonitorFunction = Callable[[KSP, int, float], None]
+KSPPreSolveFunction = Callable[[KSP, Vec, Vec], None]
+KSPPostSolveFunction = Callable[[KSP, Vec, Vec], None]
+SNESMonitorFunction = Callable[[SNES, int, float], None]
+SNESObjFunction = Callable[[SNES, Vec], None]
+SNESFunction = Callable[[SNES, Vec, Vec], None]
+SNESJacobianFunction = Callable[[SNES, Vec, Mat, Mat], None]
+SNESGuessFunction = Callable[[SNES, Vec], None]
+SNESUpdateFunction = Callable[[SNES, int], None]
+SNESLSPreFunction = Callable[[Vec, Vec], None]
+SNESNGSFunction = Callable[[SNES, Vec, Vec], None]
+TSRHSFunction = Callable[[TS, float, Vec, Vec], None]
+TSRHSJacobian = Callable[[TS, float, Vec, Mat, Mat], None]
+TSRHSJacobianP = Callable[[TS, float, Vec, Mat], None]
+TSIFunction = Callable[[TS, float, Vec, Vec, Vec], None]
+TSIJacobian = Callable[[TS, float, Vec, Vec, float, Mat, Mat], None]
+TSIJacobianP = Callable[[TS, float, Vec, Vec, float, Mat], None]
+TSI2Function = Callable[[TS, float, Vec, Vec, Vec, Vec], None]
+TSI2Jacobian = Callable[[TS, float, Vec, Vec, Vec, float, float, Mat, Mat], None]
+TSI2JacobianP = Callable[[TS, float, Vec, Vec, Vec, float, float, Mat], None]
+TSMonitorFunction = Callable[[TS, int, float, Vec], None]
+TSPreStepFunction = Callable[[TS], None]
+TSPostStepFunction = Callable[[TS], None]
+TSIndicatorFunction = Callable[[TS, float, Vec, NDArray[float]], None]
+TSPostEventFunction = Callable[[TS, NDArray[int], float, Vec, bool], None]
+TAOObjectiveFunction = Callable[[TAO, Vec], float]
+TAOGradientFunction = Callable[[TAO, Vec, Vec], None]
+TAOObjectiveGradientFunction = Callable[[TAO, Vec, Vec], float]
+TAOHessianFunction = Callable[[TAO, Vec, Mat, Mat], None]
+TAOUpdateFunction = Callable[[TAO, int], None]
+TAOMonitorFunction = Callable[[TAO], None]
+TAOConvergedFunction = Callable[[TAO], None]
+TAOJacobianFunction = Callable[[TAO, Vec, Mat, Mat], None]
+TAOResidualFunction = Callable[[TAO, Vec, Vec], None]
+TAOJacobianResidualFunction = Callable[[TAO, Vec, Mat, Mat], None]
+TAOVariableBoundsFunction = Callable[[TAO, Vec, Vec], None]
+TAOConstraintsFunction = Callable[[TAO, Vec, Vec], None]
+TAOConstraintsJacobianFunction = Callable[[TAO, Vec, Mat, Mat], None]
+TAOLSObjectiveFunction = Callable[[TAOLineSearch, Vec], float]
+TAOLSGradientFunction = Callable[[TAOLineSearch, Vec, Vec], None]
+TAOLSObjectiveGradientFunction = Callable[[TAOLineSearch, Vec, Vec], float]
