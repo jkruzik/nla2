@@ -1,6 +1,7 @@
 # Numerical Linear Algebra 2
 ## Running the examples
 The examples can be run locally or through GitHub Codespaces.
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jkruzik/nla2)
 
 ## Lesson 1
