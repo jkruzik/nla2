@@ -33,3 +33,14 @@ for pj in p:
 
 # %% [markdown]
 # Relatively small changes to the coefficients cause the evaluated polynomial to blow up because it is ill conditioned.
+# Let us slightly modify the coefficient of x^19
+# %%
+p1 = p[1] - 2**(-23)
+print(f"\ncoeff at x^19: {p[1]}, modified coeff at x^19 {p1}")
+p[1] = p1
+
+rootsp = np.roots(p)
+print("Roots from numpy with shifted coeff:\n", rootsp)
+
+# %% [markdown]
+# See [Conditioning of Wilkinson's polynomial](https://en.wikipedia.org/wiki/Wilkinson%27s_polynomial#Conditioning_of_Wilkinson's_polynomial)
