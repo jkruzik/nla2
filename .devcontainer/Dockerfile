@@ -8,7 +8,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip and install some dev tools
-RUN pip install -U --break-system-packages ipykernel numpy scipy sympy matplotlib mpi4py
+RUN pip install -U --break-system-packages ipykernel ipyparallel numpy scipy sympy matplotlib mpi4py
 
 # Install PETSc
 ENV PETSC_DIR=/opt/petsc
