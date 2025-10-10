@@ -1,3 +1,7 @@
+# This is a slight modification of the example $PETSC_DIR/src/binding/petsc4py/demo/poisson2d/poisson2d.py
+# See also https://petsc.org/release/petsc4py/demo/poisson2d/poisson2d.html
+# Modifications: known exact solution, plot norms of residuals with matplotlib
+#
 # Poisson in 2D
 # =============
 #
@@ -24,7 +28,9 @@
 #   $ python poisson2d.py
 #
 # potentially with additional options passed at the end of the command.
-#
+
+import matplotlib.pyplot as plt
+
 # At the start of your script, call `petsc4py.init` passing `sys.argv` so that
 # command-line arguments to the script are passed through to PETSc.
 
@@ -149,22 +155,33 @@ ksp.setFromOptions()
 
 x, b = A.createVecs()
 x.set(1.0)
-b = A.mult(x)
-#x.set(0.0)
+A.mult(x, b)
+ksp.setConvergenceHistory()
 ksp.solve(b, x)
+
+# plot norms of residuals
+res = ksp.getConvergenceHistory()
+if (PETSc.COMM_WORLD.rank == 0):
+    plt.semilogy(res)
+    plt.show()
+    #plt.savefig("residual.png")
 
 # Finally, allow the user to print the solution by passing ``-view_sol`` to the
 # script.
 
 x.viewFromOptions('-view_sol')
 
-# Things to try
+# TODO Things to try
 # -------------
 #
 # - Show the solution with ``-view_sol``.
 # - Show the matrix with ``-view_mat``.
+# - Monitor convergence with ``-ksp_monitor``.
 # - Change the resolution with ``-n``.
 # - Use a direct solver by passing ``-ksp_type preonly -pc_type lu``.
+# - View solver and its settings with ``-ksp_view``.
+# - Change tolerance with ``-ksp_rtol``.
+# - Change solvers with ``-ksp_type`` and preconditioners with ``-pc_type``. Monitor convergence.
 # - Run in parallel on two processors using:
 #
 #   .. code-block:: console

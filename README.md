@@ -29,3 +29,14 @@ The examples can be run locally or through GitHub Codespaces.
 **Recommended reading:**
 - T. Kozubek et al., "[Lineární algebra s Matlabem](https://mi21.vsb.cz/sites/mi21.vsb.cz/files/unit/linearni_algebra_s_matlabem.pdf)", 2012. Chapters 16 and 17, especially pp. 134-138
 - [PETSc User Guide: Getting Started](https://petsc.org/release/manual/getting_started/)
+
+## Lesson 4
+- Introduction to PETSc and petsc4py
+
+**Recommended reading:**
+- [Writing PETSc programs in C, compiling, etc.](https://petsc.org/release/manual/getting_started/#writing-c-c-or-fortran-applications)
+- [Basic vector operations](https://petsc.org/release/manual/vec/#basic-vector-operations)
+- [Index sets](https://petsc.org/release/manual/vec/#low-level-vector-communication)
+- [Parallel matrix layout](https://petsc.org/release/manual/mat/#parallel-aij-sparse-matrices)
+- [Basic matrix operations](https://petsc.org/release/manual/mat/#basic-matrix-operations)
+- [Linear systems up to preconditioners (included)](https://petsc.org/release/manual/ksp/)
