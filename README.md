@@ -40,3 +40,15 @@ The examples can be run locally or through GitHub Codespaces.
 - [Parallel matrix layout](https://petsc.org/release/manual/mat/#parallel-aij-sparse-matrices)
 - [Basic matrix operations](https://petsc.org/release/manual/mat/#basic-matrix-operations)
 - [Linear systems up to preconditioners (included)](https://petsc.org/release/manual/ksp/)
+
+## Lesson 5
+- Recap of Eigenvalues and Eigenvectors
+- Eigenvalues of difference equations, Markov matrices, and differential equations and their stability
+- Introduction to SLEPc
+
+**Recommended reading:**
+- G. Strang - "Linear Algebra and Its Applications, 4th Edition", 2006. Sections 5.3-5.4
+- [Eigenvectors and Eigenvalues: explained visually](https://setosa.io/ev/eigenvectors-and-eigenvalues/)
+- [SLEPc - EPS: Eigenvalue Problem Solver](https://slepc.upv.es/release/documentation/manual/eps.html)
+- [SLEPc: eps/ex1.c](https://slepc.upv.es/release/documentation/hands-on/hands-on1.html)
+- [slepc4py: eps/ex1.py](https://slepc.upv.es/release/slepc4py/tutorial.html#commented-source-of-a-simple-example)
