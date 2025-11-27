@@ -41,8 +41,6 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Měření: čas výpočtu, paměť, chyba.
    - Analýza kompromisu mezi přesností a rychlostí.
 
----
-
 1. ## Srovnání komprese dat pomocí SVD a waveletů
    Porovnejte účinnost komprese dat pomocí SVD a pomocí waveletové transformace na vybraných obrázcích nebo signálech.
 
@@ -52,8 +50,6 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Měření: poměr komprese, kvalita rekonstrukce, čas komprese/dekomprese.
    - Analýza vlivu parametrů (počet singulárních hodnot, počet úrovní waveletovského rozkladu).
 
----
-
 1. ## Implementace SVD pomocí Golub–Kahan bidiagonalizace pro husté matice
    Implementujte SVD založenou na Golub–Kahanově bidiagonalizaci a porovnejte ji s knihovními implementacemi na hustých maticích.
 
@@ -61,8 +57,6 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Implementace bidiagonalizace a následné diagonalizace bidiagonální matice.
    - Testy na hustých maticích různých velikostí.
    - Porovnání rychlosti a přesnosti s LAPACKem (např. NumPy/SciPy SVD).
-
----
 
 1. ## Implementace SVD pomocí Golub–Kahan–Lanczos bidiagonalizace pro řídké matice
    Implementujte Lanczosovu variantu Golub–Kahanovy bidiagonalizace pro řídké matice a porovnejte ji s existujícími sparse SVD řešiči.
@@ -72,8 +66,6 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Efektivní práce s řídkými strukturami.
    - Měření konvergence, rychlosti a paměti.
 
----
-
 1. ## Srovnání reordering algoritmů pro přímé řešiče v PETSc
    Porovnejte různé reordering algoritmy používané přímými řešiči v PETSc z hlediska času reorderingu, faktorizace, řešení a velikosti faktorů.
 
@@ -82,15 +74,11 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Vyzkoušejte několik algoritmů `MatOrderingType`.
    - Měření: čas reorderingu, čas faktorizace, čas řešení, paměť/fill-in.
 
----
-
 1. ## Srovnání přímých řešičů v PETSc
    Porovnejte různé přímé řešiče dostupné v PETSc (MUMPS, PaStiX, SuperLU...) z hlediska rychlosti faktorizace, řešení a paměťové náročnosti.
 
    ### Požadavky
    - Měřte čas faktorizace a řešení.
-
----
 
 1. ## Srovnání předpodmiňovačů pro KSPCG v PETSc
    Porovnejte výkon různých předpodmiňovačů při použití konjugovaného gradientu (KSPCG) v PETSc.
@@ -100,8 +88,6 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Měření: počet iterací a čas.
 
    **Srovnání předpodmiňovačů dává smysl jen tehdy, když `KSPSetNormType(ksp, KSP_NORM_UNPRECONDITIONED).`**
-
----
 
 1. ## Srovnání předpodmiňovačů pro KSPGMRES v PETSc
    Porovnejte různé předpodmiňovače pro GMRES (KSPGMRES) v PETSc.
@@ -113,8 +99,6 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
 
    **Srovnání předpodmiňovačů dává smysl jen tehdy, když `KSPSetNormType(ksp, KSP_NORM_UNPRECONDITIONED).`**
 
----
-
 1. ## Srovnání metod pro řešení least squares problému v PETSc
    Porovnejte různé metody řešení least-squares problémů dostupné v PETSc (např. LSQR, BCGS, BICG, CGNE).
 
@@ -123,8 +107,6 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Měření konvergence, rychlosti.
    - Bez předpodmínění.
 
----
-
 1. ## Gram–Schmidtův a modifikovaný Gram–Schmidtův proces
    Porovnejte klasický a modifikovaný Gram–Schmidtův proces z hlediska numerické stability a případně i paralelní škálovatelnosti.
 
@@ -132,16 +114,12 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Implementujte CGS a MGS.
    - Měření ztráty ortogonality a numerické chyby.
 
----
-
 1. ## Implementace a porovnání metod největšího spádu s optimalní a Barzilai-Borwein délkami kroků a CG
    Implementujte metodu největšího spádu s optimalní a Barzilai-Borwein délkami kroků a CG. Metody porovnejte z hlediska rychlost konvergence a času výpočtu.
 
    ### Požadavky
    - Implementace metody největšího spádu s optimalní a Barzilai-Borwein délkami kroků a CG.
    - Porovnání počtu iterací a času mezi jednotlivými metodami.
-
----
 
 1. ## Implementace vlastního předpodmíněného CG v PETSc a porovnání s KSPCG
    Implementujte vlastní předpodmíněnou verzi CG v rámci PETSc a porovnejte ji s vestavěným KSPCG.
