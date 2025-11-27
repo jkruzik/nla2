@@ -75,13 +75,13 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Měření: čas reorderingu, čas faktorizace, čas řešení, paměť/fill-in.
 
 1. ## Srovnání přímých řešičů v PETSc
-   Porovnejte různé přímé řešiče dostupné v PETSc (MUMPS, PaStiX, SuperLU...) z hlediska rychlosti faktorizace, řešení a paměťové náročnosti.
+   Porovnejte různé přímé řešiče dostupné v PETSc (MUMPS, PaStiX, SuperLU...) z hlediska rychlosti faktorizace a řešení.
 
    ### Požadavky
    - Měřte čas faktorizace a řešení.
 
 1. ## Srovnání předpodmiňovačů pro KSPCG v PETSc
-   Porovnejte výkon různých předpodmiňovačů při použití konjugovaného gradientu (KSPCG) v PETSc.
+   Porovnejte efektivitu různých předpodmiňovačů pro KSPCG v PETSc.
 
    ### Požadavky
    - Otestujte předpodmiňovače: Jacobi, SOR, ILU/ICC a případně GAMG.
@@ -90,7 +90,7 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    **Srovnání předpodmiňovačů dává smysl jen tehdy, když `KSPSetNormType(ksp, KSP_NORM_UNPRECONDITIONED).`**
 
 1. ## Srovnání předpodmiňovačů pro KSPGMRES v PETSc
-   Porovnejte různé předpodmiňovače pro GMRES (KSPGMRES) v PETSc.
+   Porovnejte efektivitu různých předpodmiňovačů pro KSPGMRES v PETSc.
 
    ### Požadavky
    - Otestujte nepředpodmíněné GMRES a předpodmiňovače Jacobi, SOR, ILU/ICC a případně GAMG.
@@ -104,7 +104,7 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
 
    ### Požadavky
    - Testujte na obdelníkových maticích.
-   - Měření konvergence, rychlosti.
+   - Měření: počet iterací a čas.
    - Bez předpodmínění.
 
 1. ## Gram–Schmidtův a modifikovaný Gram–Schmidtův proces
@@ -113,19 +113,20 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    ### Požadavky
    - Implementujte CGS a MGS.
    - Měření ztráty ortogonality a numerické chyby.
+   - Vyzkoušejte na maticících s řádově ruznýmí čísly podmíněnosti.
 
 1. ## Implementace a porovnání metod největšího spádu s optimalní a Barzilai-Borwein délkami kroků a CG
-   Implementujte metodu největšího spádu s optimalní a Barzilai-Borwein délkami kroků a CG. Metody porovnejte z hlediska rychlost konvergence a času výpočtu.
+   Implementujte metodu největšího spádu s optimalní a Barzilai-Borwein délkami kroků a CG. Metody porovnejte z hlediska rychlosti konvergence a času výpočtu.
 
    ### Požadavky
    - Implementace metody největšího spádu s optimalní a Barzilai-Borwein délkami kroků a CG.
-   - Porovnání počtu iterací a času mezi jednotlivými metodami.
+   - Porovnání počtů iterací a časů mezi jednotlivými metodami.
 
 1. ## Implementace vlastního předpodmíněného CG v PETSc a porovnání s KSPCG
    Implementujte vlastní předpodmíněnou verzi CG v rámci PETSc a porovnejte ji s vestavěným KSPCG.
 
    ### Požadavky
-   - Implementace CG s podporou předpodmínění
+   - Implementace CG s podporou předpodmínění (využíjte PC objekt v PETSc)
    - Porovnání správnosti výsledků, počtu iterací a času s KSPCG.
 
    **Srovnání předpodmiňovačů dává smysl jen tehdy, když `KSPSetNormType(ksp, KSP_NORM_UNPRECONDITIONED).`**
