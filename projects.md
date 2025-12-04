@@ -20,6 +20,7 @@ Report je doporučeno napsat v LaTeXu:
 Otestujte algoritmy alespoň na 3 ruzných problémech.
 
 Pokud budete testovat na maticích a není řečeno jinak, vyberte si matice ze [SuiteSparse Matrix Collection](https://sparse.tamu.edu).
+Script pro převedení matic / pravých stran do PETSc formátu a jejich načtení je v [`tools/mm2petsc`](tools/mm2petsc).
 
 V projektech využívajících PETSc/SLEPc můžete provádět testování i paralelně.
 
