@@ -1,4 +1,6 @@
 # Numerical Linear Algebra 2
+Projects assignments can be found [here](projects.md)
+
 ## Running the examples
 The examples can be run locally or through GitHub Codespaces.
 
@@ -103,6 +105,5 @@ Web Search Engine](http://infolab.stanford.edu/pub/papers/google.pdf)", 1998.
 ## Lesson 12
  - GMRES and MINRES
 **Recommended reading:**
-- J. Kružík - "[Improving Quadratic Programming Algorihtms](https://homel.vsb.cz/~kru0097/files/kruzik_phd.pdf#chapter.4)", 2024. Chapter 4
 - E. Carson, J. Liesen, Z. Strakoš - "[Towards understanding CG and GMRES through examples](https://www.karlin.mff.cuni.cz/~strakos/download/2024_CarLieStr.pdf)", 2024.
 
