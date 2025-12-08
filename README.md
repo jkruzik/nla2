@@ -52,3 +52,57 @@ The examples can be run locally or through GitHub Codespaces.
 - [SLEPc - EPS: Eigenvalue Problem Solver](https://slepc.upv.es/release/documentation/manual/eps.html)
 - [SLEPc: eps/ex1.c](https://slepc.upv.es/release/documentation/hands-on/hands-on1.html)
 - [slepc4py: eps/ex1.py](https://slepc.upv.es/release/slepc4py/tutorial.html#commented-source-of-a-simple-example)
+
+
+## Lesson 6
+- Singular Values Decomposition (SVD)
+- Compression with SVD
+
+**Recommended reading:**
+- Tebbens, J.D.; Hnětynková, I.; Plešinger, M.; Strakoš, Z.; Tichý, P. - "Analýza metod pro maticové výpočty: základní metody", 2012
+
+## Lesson 7
+- Principal Component Analysis (PCA)
+
+**Recommended reading:**
+- J. Jauregui - "[Principal component analysis with linear algebra](https://www.math.union.edu/~jaureguj/PCA.pdf)", 2002.
+
+## Lesson 8
+- PageRank
+
+**Recommended reading:**
+S. Brin and L. Page - "[The Anatomy of a Large-Scale Hypertextual
+Web Search Engine](http://infolab.stanford.edu/pub/papers/google.pdf)", 1998.
+
+## Lesson 9
+- Orthonormal basis (Wavelet, Fourier)
+- Orthogonalization (Gram-Schmidt)
+
+**Recommended reading:**
+- D. Horák - "[Diskrétní transformace](https://mi21.vsb.cz/modul/diskretni-transformace.html)", 2012.
+- https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process
+
+## Lesson 10
+- Sparse direct solvers and matrix reorderings
+- Quadratic cost function minimization
+- Steepest descent
+
+**Recommended reading:**
+- J. Kružík - "[Improving Quadratic Programming Algorihtms](https://homel.vsb.cz/~kru0097/files/kruzik_phd.pdf#chapter.4)", 2024. Chapter 4
+
+## Lesson 11
+- Barzilai-Borwein step lengths
+- Krylov Basis
+- Conjugate Gradients
+
+**Recommended reading:**
+- J. Kružík - "[Improving Quadratic Programming Algorihtms](https://homel.vsb.cz/~kru0097/files/kruzik_phd.pdf#chapter.4)", 2024. Chapter 4
+- E. Carson, J. Liesen, Z. Strakoš - "[Towards understanding CG and GMRES through examples](https://www.karlin.mff.cuni.cz/~strakos/download/2024_CarLieStr.pdf)", 2024.
+
+
+## Lesson 12
+ - GMRES and MINRES
+**Recommended reading:**
+- J. Kružík - "[Improving Quadratic Programming Algorihtms](https://homel.vsb.cz/~kru0097/files/kruzik_phd.pdf#chapter.4)", 2024. Chapter 4
+- E. Carson, J. Liesen, Z. Strakoš - "[Towards understanding CG and GMRES through examples](https://www.karlin.mff.cuni.cz/~strakos/download/2024_CarLieStr.pdf)", 2024.
+
