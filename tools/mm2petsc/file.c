@@ -28,7 +28,7 @@ int main(int argc, char **args)
     PetscCall(MatLoad(A, viewer));
 
     // Create vectors compatible with A; x could be NULL
-    PetscCall(MatCreateVecs(A, &b, &x));
+    PetscCall(MatCreateVecs(A, &x, &b));
 
     // Attempt to load right-hand side vector, ignore errors if not present
     PetscPushErrorHandler(PetscIgnoreErrorHandler, NULL);
