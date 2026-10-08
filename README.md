@@ -26,7 +26,13 @@ The examples can be run locally or through GitHub Codespaces.
 
 ## Lesson 3
 - Finite Difference and its use to solve Laplace's/Poisson's equations in 1D/2D
-- Introduction to PETSc: [ksp/tutorials/ex2.c](https://petsc.org/release/src/ksp/ksp/tutorials/ex2.c.html)
+- Introduction to PETSc:
+    - Installation (https://petsc.org/release/install/install_tutorial/)
+    - [Getting started, `PETSC_DIR`, `PETSC_ARCH`, Objects lifetime](https://petsc.org/release/manual/getting_started/)
+    - [Manual Pages](https://petsc.org/release/manualpages/singleindex/)
+    - [ksp/tutorials/ex1.c](https://petsc.org/release/src/ksp/ksp/tutorials/ex1.c.html)
+    - [ksp/tutorials/ex23.c](https://petsc.org/release/src/ksp/ksp/tutorials/ex23.c.html)
+    - [ksp/tutorials/ex2.c](https://petsc.org/release/src/ksp/ksp/tutorials/ex2.c.html)
 
 **Recommended reading:**
 - T. Kozubek et al., "[Lineární algebra s Matlabem](https://mi21.vsb.cz/sites/mi21.vsb.cz/files/unit/linearni_algebra_s_matlabem.pdf)", 2012. Chapters 16 and 17, especially pp. 134-138
