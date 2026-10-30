@@ -6,6 +6,7 @@ from sklearn import datasets
 iris = datasets.load_iris()
 X_raw = iris.data
 y = iris.target
+feature_names = iris.feature_names
 target_names = iris.target_names
 
 # Standardize the data (zero mean, unit variance)
@@ -15,9 +16,14 @@ X = X_mean
 
 #X = X_std
 
+print("Features:", feature_names)
+C = (X.T @ X) / (len(X) - 1)
+print("Feature variances (diag of C):", np.diag(C))
+
 # Compute SVD
 U, S, Vt = np.linalg.svd(X, full_matrices=False)
-print(Vt[:,:2])
+V = Vt.T
+print("First 2 principal axes (columns of V):\n", V[:, :2])
 
 # Project data onto principal directions = principal components
 # XV = US

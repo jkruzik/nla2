@@ -18,7 +18,6 @@ df['species'] = [target_names[i] for i in y]
 # Pairplot (scatterplot matrix)
 sns.pairplot(df, hue='species', diag_kind='kde', corner=True)
 plt.suptitle("Pairwise Feature Relationships in Iris Dataset", y=1.02)
-plt.show()
 
 # Correlation heatmap
 corr = df.iloc[:, :-1].corr()
