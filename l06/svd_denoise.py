@@ -33,6 +33,7 @@ image_path = "plaid_pattern.jpg"  # Low-rank structured image low res of https:/
 #image_path = "camera.png"       # Natural grayscale image
 img_clean = to_grayscale(imread(image_path))
 
+# TODO vary noise_std
 noise_std = 0.15
 noise = np.random.normal(0.0, noise_std, img_clean.shape)
 img_noisy = np.clip(img_clean + noise, 0.0, 1.0)
