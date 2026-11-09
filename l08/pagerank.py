@@ -21,7 +21,7 @@ def build_markov_matrix_from_edges(edges,n_nodes):
     M = A / col_sums
     return M
 
-def pagerank(M, damping=0.85, tol=1e-6, max_iter=1000):
+def pagerank(M, damping=0.85, tol=1e-1, max_iter=1000):
     """
     Compute PageRank vector for a dense Markov matrix.
     """
@@ -75,3 +75,7 @@ if __name__ == "__main__":
         print(f"Node {i}: {val:.4f}")
     print("Sum of PageRank values:", np.sum(pr))
 
+# TODO:
+# - change the tolerance
+# - make an efficient sparse matrix version of the algorithm
+# - try it on larger graphs
