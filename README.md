@@ -1,4 +1,6 @@
 # Numerical Linear Algebra 2
+[Lecture notes](notes.pdf) are available to complement the presentations in the lesson directories.
+
 Projects assignments can be found [here](projects.md)
 
 ## Running the examples
@@ -79,12 +81,14 @@ The examples can be run locally or through GitHub Codespaces.
 - PageRank
 
 **Recommended reading:**
-S. Brin and L. Page - "[The Anatomy of a Large-Scale Hypertextual
-Web Search Engine](http://infolab.stanford.edu/pub/papers/google.pdf)", 1998.
+- L. Page, S. Brin, R. Motwani and T. Winograd - "The PageRank Citation Ranking : Bringing Order to the Web", 1998.
+- S. Brin and L. Page - "[The Anatomy of a Large-Scale Hypertextual
+Web Search Engine](https://www.sciencedirect.com/science/article/pii/S016975529800110X)", 1998.
 
 ## Lesson 9
-- Orthonormal basis (Wavelet, Fourier)
+- Orthogonal projections
 - Orthogonalization (Gram-Schmidt)
+- Orthonormal basis (Fourier, Wavelet)
 
 **Recommended reading:**
 - D. Horák - "[Diskrétní transformace](https://mi21.vsb.cz/modul/diskretni-transformace.html)", 2012.

@@ -1,9 +1,9 @@
 # Projekty
 ## Obecné požadavky a informace
 
-Pošlete e-mailem, které zadání byste chtěli vypracovat, nejpozději do **9. 12. 2025**.
+Pošlete e-mailem, které zadání byste chtěli vypracovat, nejpozději do **12. 12. 2026**.
 
-Termín odevzdání je **8. 2. 2026**. Odevzdejte e-mailem report a kód (odkaz na Git nebo archiv (zip/tar.*)).
+Termín odevzdání je **8. 2. 2027**. Odevzdejte e-mailem report a kód (odkaz na Git nebo archiv (zip/tar.*)).
 
 Kód musí být funkční a bude obsahovat README s instrukcemi, jak program zkompilovat a spustit.
 Kód může být v libovolném jazyce. Pokud bude kód v Jupyter notebooku, bude odevzdán se všemi buňkami proběhnutými.
@@ -42,14 +42,15 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    - Měření: čas výpočtu, paměť, chyba.
    - Analýza kompromisu mezi přesností a rychlostí.
 
-1. ## Srovnání komprese dat pomocí SVD a waveletů
-   Porovnejte účinnost komprese dat pomocí SVD a pomocí waveletové transformace na vybraných obrázcích nebo signálech.
+1. ## Srovnání komprese dat pomocí SVD, FFT a waveletů
+   Porovnejte účinnost komprese dat pomocí SVD a Fourierovy a waveletové transformace na vybraných obrázcích nebo signálech.
 
    ### Požadavky
-   - Implementujte kompresi pomocí SVD i waveletů.
+   - Implementujte kompresi pomocí SVD, FFT a  waveletů.
    - Testy na obrázcích či signálech.
    - Měření: poměr komprese, kvalita rekonstrukce, čas komprese/dekomprese.
-   - Analýza vlivu parametrů (počet singulárních hodnot, počet úrovní waveletovského rozkladu).
+   - Analýza vlivu parametrů (počet singulárních hodnot, volba prahování a počet úrovní waveletovského rozkladu).
+   - Případně okomentujte viditelné artefakty pro ruzné metody.
 
 1. ## Implementace SVD pomocí Golub–Kahan bidiagonalizace pro husté matice
    Implementujte SVD založenou na Golub–Kahanově bidiagonalizaci a porovnejte ji s knihovními implementacemi na hustých maticích.
@@ -101,10 +102,11 @@ V projektech využívajících PETSc/SLEPc můžete provádět testování i par
    **Srovnání předpodmiňovačů dává smysl jen tehdy, když `KSPSetNormType(ksp, KSP_NORM_UNPRECONDITIONED).`**
 
 1. ## Srovnání metod pro řešení least squares problému v PETSc
-   Porovnejte různé metody řešení least-squares problémů dostupné v PETSc (např. LSQR, BCGS, BICG, CGNE).
+   Porovnejte CG aplikované na normalní soustavu rovnic $A^TA$, CGLS a LSQR.
 
    ### Požadavky
-   - Testujte na obdelníkových maticích.
+   - Testujte na obdelníkových maticích (m > n).
+   - Pro vytvoření $A^TA$ operátoru (pro CG metodu) srovnejte jak implicitní (`MatCreateNormal`), tak explicitní (např. `MatTransposeMatMult`) sestavení.
    - Měření: počet iterací a čas.
    - Bez předpodmínění.
 
